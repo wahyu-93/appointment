@@ -10,4 +10,14 @@ class DetailUser extends Model
     use HasFactory;
 
     protected $table = 'detail_user';
+
+    public function typeUser()
+    {
+        return $this->belongsTo(typeUser::class, 'type_user_id', 'id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

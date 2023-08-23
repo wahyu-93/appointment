@@ -10,4 +10,10 @@ class TypeUser extends Model
     use HasFactory;
 
     protected $table = 'type_user';
+
+    public function detailusers()
+    {
+        return $this->hasMany(detailusers::class,'type_user_id');
+    }
+
 }

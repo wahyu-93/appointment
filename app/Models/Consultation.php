@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Consultation extends Model
 {
     use HasFactory;
+
+    public function appoitment()
+    {
+        return $this->hasMany(Appoitment::class);
+    }
 }
